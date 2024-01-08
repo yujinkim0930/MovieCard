@@ -1,86 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@400;700&display=swap");
 
 * {
-    font-family: 'Gowun Dodum', sans-serif;
-    margin: 0;
+  font-family: "Gowun Dodum", sans-serif;
+  margin: 0;
 }
 
 .title {
-    height: 200px;
-    color: black;
-    background-color: skyblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-size: cover;
-    border-bottom: 1px solid black;
+  height: 200px;
+  color: black;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid black;
 }
 
-body{
-    background-color: skyblue;
+body {
+  background-color: skyblue;
 }
 
-.title>h1 {
-    font-size: 50px;
+.title > h1 {
+  font-size: 50px;
 }
 
 .search {
-    font-size: 25px;
-    margin: 20px auto 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+  font-size: 25px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 input#box {
-    width: 200px;
-    margin: 0 20px;
-    text-align: center;
-    font-size: 18px;
+  width: 200px;
+  margin: 0 20px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .search > button {
-    font-size: 15px;
-    width: 50px;
+  font-size: 15px;
+  width: 50px;
 }
 
-
-
-.mytitle>button {
-    width: 150px;
-    height: 50px;
-    background-color: transparent;
-    color: black;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-top: 20px;
+.mytitle > button {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 #list {
-    width: 1800px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+  width: 1800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
 .card {
-    border-radius: 5px;
-    background-color: beige;
-    margin: 50px auto;
-    padding: 10px;
-    width: 300px;
-    text-align: center;
-    cursor: pointer;
+  border-radius: 5px;
+  background-color: beige;
+  box-shadow: 3px 3px 3px gray;
+  margin: 50px auto;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .card > img {
-    width: 280px;
-    margin-top:10px;
+  width: 280px;
+  margin-top: 10px;
 }
 
 .card > h2 {
-    margin:10px 0 5px;
+  margin: 10px 0 5px;
 }
