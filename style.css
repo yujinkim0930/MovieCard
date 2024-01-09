@@ -57,7 +57,7 @@ input#box {
 }
 
 #list {
-  width: 1800px;
+  width: 1600px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
