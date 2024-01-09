@@ -8,7 +8,7 @@
 .title {
   height: 200px;
   color: black;
-  background-color: skyblue;
+  background-color: rgb(153, 210, 233);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: rgb(103, 158, 180);
 }
 
 .title > h1 {
