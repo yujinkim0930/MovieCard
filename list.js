@@ -17,7 +17,7 @@ let movies = fetch(
     let mList = response["results"];
     let movie_list = document.getElementById("list");
     const btn = document.querySelector("#searchbtn");
-    const drawList = mList.forEach((a) => {
+    mList.forEach((a) => {
       let id = a["id"];
       let title = a["title"];
       let overview = a["overview"];
