@@ -22,11 +22,13 @@ let movies = fetch(
       let title = a["title"];
       let overview = a["overview"];
       let img = "https://image.tmdb.org/t/p/original" + a["poster_path"];
+      let vote_average = a["vote_average"];
       let card_html = `
       <div class="card" id="${id}" onclick="alert('영화 ID: ' + '${id}')">
         <img src="${img}" alt="${title}">
         <h2 class="card-title">${title}</h2>
         <p>${overview}</p>
+        <p>Rating: ${vote_average}</p>
       </div>
       `;
       movie_list.innerHTML += card_html;
