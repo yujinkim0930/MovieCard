@@ -13,7 +13,7 @@ let movies = fetch(
 )
   .then((response) => response.json())
   .then((response) => {
-    // 반복해서 id, title, overview, img 가져와서 출력하기
+    // 반복해서 id, title, overview, poster_path, vote_average 가져와서 출력하기
     let mList = response["results"];
     let movie_list = document.getElementById("list");
     const btn = document.querySelector("#searchbtn");
@@ -30,14 +30,11 @@ let movies = fetch(
     });
     // 검색 버튼 클릭 시 해당 영화 출력
     btn.addEventListener("click", function (e) {
-      let inputBox = document.getElementById("box");
-      let searchTxt = inputBox.value.toUpperCase(); // 대문자로 변환
+      let searchTxt = document.getElementById("box").value.toLowerCase(); // 소문자 변환
       let searchMovieList = mList.filter(({ title }) =>
-        title.toUpperCase().includes(searchTxt)
+        title.toLowerCase().includes(searchTxt)
       );
       movie_list.innerHTML = [];
-      console.log(searchTxt);
-      console.log(searchMovieList);
 
       searchMovieList.forEach((a) => {
         let card_html = `
