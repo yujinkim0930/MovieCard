@@ -18,17 +18,12 @@ let movies = fetch(
     let movie_list = document.getElementById("list");
     const btn = document.querySelector("#searchbtn");
     mList.forEach((a) => {
-      let id = a["id"];
-      let title = a["title"];
-      let overview = a["overview"];
-      let img = "https://image.tmdb.org/t/p/original" + a["poster_path"];
-      let vote_average = a["vote_average"];
       let card_html = `
-      <div class="card" id="${id}" onclick="alert('영화 ID: ' + '${id}')">
-        <img src="${img}" alt="${title}">
-        <h2 class="card-title">${title}</h2>
-        <p>${overview}</p>
-        <p>Rating: ${vote_average}</p>
+      <div class="card" id="${a.id}" onclick="alert('영화 ID: ' + '${a.id}')">
+        <img src="https://image.tmdb.org/t/p/original${a.poster_path}" alt="${a.title}">
+        <h2 class="card-title">${a.title}</h2>
+        <p>${a.overview}</p>
+        <p>Rating: ${a.vote_average}</p>
       </div>
       `;
       movie_list.innerHTML += card_html;
@@ -45,21 +40,16 @@ let movies = fetch(
       console.log(searchMovieList);
 
       searchMovieList.forEach((a) => {
-        let r_id = a["id"];
-        let r_title = a["title"];
-        let r_overview = a["overview"];
-        let r_img = "https://image.tmdb.org/t/p/original" + a["poster_path"];
-        let r_vote_average = a["vote_average"];
-        let r_card_html = `
-      <div class="card" id="${r_id}" onclick="alert('영화 ID: ' + '${r_id}')">
-        <img src="${r_img}" alt="${r_title}">
-        <h2 class="card-title">${r_title}</h2>
-        <p>${r_overview}</p>
-        <p>Rating: ${r_vote_average}</p>
+        let card_html = `
+      <div class="card" id="${a.id}" onclick="alert('영화 ID: ' + '${a.id}')">
+        <img src="https://image.tmdb.org/t/p/original${a.poster_path}" alt="${a.title}">
+        <h2 class="card-title">${a.title}</h2>
+        <p>${a.overview}</p>
+        <p>Rating: ${a.vote_average}</p>
       </div>
       `;
 
-        movie_list.innerHTML += r_card_html;
+        movie_list.innerHTML += card_html;
       });
     });
   })
