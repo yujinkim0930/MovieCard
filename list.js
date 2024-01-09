@@ -17,7 +17,7 @@ let movies = fetch(
     let mList = response["results"];
     let movie_list = document.getElementById("list");
     const btn = document.querySelector("#searchbtn");
-    mList.forEach((a) => {
+    const drawList = mList.forEach((a) => {
       let id = a["id"];
       let title = a["title"];
       let overview = a["overview"];
@@ -31,6 +31,7 @@ let movies = fetch(
       `;
       movie_list.innerHTML += card_html;
     });
+    // 검색 버튼 클릭 시 해당 영화 출력
     btn.addEventListener("click", function (e) {
       let inputBox = document.getElementById("box");
       let searchTxt = inputBox.value.toUpperCase(); // 대문자로 변환
